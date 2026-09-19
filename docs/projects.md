@@ -1,7 +1,7 @@
-# dsh-tauri-desk · 项目看板使用指南（HOW WE USE GITHUB PROJECTS）
+# dsh-tauri · 项目看板使用指南（HOW WE USE GITHUB PROJECTS）
 
-> 本文件是 dsh-tauri-desk 组织 **GitHub Projects v2** 的落地规范：两个组织级看板 + 配套标签 + 自动化。
-> 新维护者/贡献者先读这里。完整调研背景见 <https://github.com/dsh-tauri-desk/.github> 或组织讨论区。
+> 本文件是 dsh-tauri 组织 **GitHub Projects v2** 的落地规范：两个组织级看板 + 配套标签 + 自动化。
+> 新维护者/贡献者先读这里。完整调研背景见 <https://github.com/dsh-tauri/.github> 或组织讨论区。
 
 ---
 
@@ -9,8 +9,8 @@
 
 | 看板 | 管什么 | 入口 |
 | --- | --- | --- |
-| **Issues & PRs** | 当前开发：所有仓库的 issue / PR 追踪与排序 | <https://github.com/orgs/dsh-tauri-desk/projects/2> |
-| **Roadmap** | 战略层待办：大功能、文档仓库、大版本发布计划等 | <https://github.com/orgs/dsh-tauri-desk/projects/3> |
+| **Issues & PRs** | 当前开发：所有仓库的 issue / PR 追踪与排序 | <https://github.com/orgs/dsh-tauri/projects/2> |
+| **Roadmap** | 战略层待办：大功能、文档仓库、大版本发布计划等 | <https://github.com/orgs/dsh-tauri/projects/3> |
 
 设计参考（调研摘要）：
 - 组织级**单板多视图**模型（Grafana Alerting 团队），适合多仓库小组织。
@@ -22,7 +22,9 @@
 
 ## 2. 看板 A：Issues & PRs（追踪现状）
 
-**范围**：组织级项目，已链接全部核心仓库（`deepseek-harness-desktop`、`dsh-tauri`、`dsh-tauri-ui`、`dsh-tauri-worktree`、`deepseek-harness-pkg`、`dsh-tauri-rightclick`、`dsh-tauri-plugins`、`dsh-tauri-panel`、`homebrew-desktop`、`deepseek-harness-desktop-site` 等），任何这些仓库的 issue/PR 都可加进板。
+**范围**：组织级项目，已链接全部核心仓库（`deepseek-harness-desktop`、`deepseek-harness-desktop-docs`、`deepseek-harness-pkg`、`dsh-pet-mov`、`homebrew-desktop`、`.github` 等；`deepseek-harness-desktop-website` 为私有仓库），任何这些仓库的 issue/PR 都可加进板。
+
+第一方桌面插件**不再是独立仓库**，而是 `deepseek-harness-desktop` 主仓库内 `packages/` 目录下的包：`dsh-tauri`、`dsh-tauri-model-config`、`dsh-tauri-turnrewind`、`dsh-tauri-ui`、`dsh-tauri-worktree`、`dsh-tauri-panel-extension`、`dsh-tauri-panel-scheduler`、`dsh-tauri-session`、`dsh-tauri-pet`、`dsh-tauri-rightclick` 共 10 个，插件相关 issue/PR 请提到主仓库。`dsh-tauri-plugins` 与 `starter-plugin` 均为 fork（前者已归档），不再作为插件主仓库。
 
 ### 2.1 字段
 
@@ -100,7 +102,7 @@
 ### 3.3 预置待办（草稿卡，维护者可改）
 
 - **🚀 v1.0 发布计划**：0.x 冻结 → alpha → beta → stable → 发布公告（checklist 用草稿卡正文列任务）。
-- **📚 文档仓库内容整理**：`deepseek-harness-desktop-site` 站点/README 结构化。
+- **📚 文档仓库内容整理**：`deepseek-harness-desktop-docs` 站点/README 结构化。
 - **🧩 大功能候选**：插件签名校验、多 Profile 管理、自动更新推送等（待填）。
 - **🏠 组织规范**：全局 labels（本文件 2.4）+ 流程文档化。
 
@@ -129,7 +131,7 @@ GitHub Projects v2 内置 Workflows 可在看板 GUI 配置（`… → Workflows
 
 ## 6. 一分钟上手（维护者）
 
-1. 打开 [Issues & PRs](https://github.com/orgs/dsh-tauri-desk/projects/2) 的 `Triage` 视图，把新 issue 按 `Issue Type` + `Priority` 归位。
-2. 需要长期跟踪的大功能 / 发布计划 → 记到 [Roadmap](https://github.com/orgs/dsh-tauri-desk/projects/3)（草稿卡即可）。
+1. 打开 [Issues & PRs](https://github.com/orgs/dsh-tauri/projects/2) 的 `Triage` 视图，把新 issue 按 `Issue Type` + `Priority` 归位。
+2. 需要长期跟踪的大功能 / 发布计划 → 记到 [Roadmap](https://github.com/orgs/dsh-tauri/projects/3)（草稿卡即可）。
 3. 每个 issue 至少打一个 `type/*` 标签；看板状态尽量与 `status/*` 标签保持一致。
 4. 完成后拖到 `Done`（或等 Workflow 自动置 Done）。
