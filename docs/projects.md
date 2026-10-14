@@ -24,7 +24,7 @@
 
 **范围**：组织级项目，已链接全部核心仓库（`deepseek-harness-desktop`、`deepseek-harness-desktop-docs`、`deepseek-harness-pkg`、`dsh-pet-mov`、`homebrew-desktop`、`.github` 等；`deepseek-harness-desktop-website` 为私有仓库），任何这些仓库的 issue/PR 都可加进板。
 
-第一方桌面插件**不再是独立仓库**，而是 `deepseek-harness-desktop` 主仓库内 `packages/` 目录下的包：`dsh-tauri`、`dsh-tauri-model-config`、`dsh-tauri-turnrewind`、`dsh-tauri-ui`、`dsh-tauri-worktree`、`dsh-tauri-panel-extension`、`dsh-tauri-panel-scheduler`、`dsh-tauri-session`、`dsh-tauri-pet`、`dsh-tauri-rightclick` 共 10 个，插件相关 issue/PR 请提到主仓库。`dsh-tauri-plugins` 与 `starter-plugin` 均为 fork（前者已归档），不再作为插件主仓库。
+第一方插件**不再是独立仓库**，而是在 [主仓库的 packages/](https://github.com/dsh-tauri/deepseek-harness-desktop/tree/main/packages) 内维护；当前 13 个内置插件以[资源清单](https://github.com/dsh-tauri/deepseek-harness-desktop/blob/main/src-tauri/resources/manifest.jsonc)为准。插件、数据管理与 [DSH Mobile](https://github.com/dsh-tauri/deepseek-harness-desktop/tree/main/src-native) 相关 issue/PR 均提到主仓库。`dsh-tauri-plugins` 与 `starter-plugin` 均为 fork（前者已归档），不再作为插件主仓库。
 
 ### 2.1 字段
 
